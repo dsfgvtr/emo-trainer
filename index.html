@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тренажёр ЭМО — Вопросы</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="trainer-wrapper">
+        <!-- Верхняя панель с изображениями -->
+        <header class="images-panel">
+            <div class="thumbnail-item">
+                <img src="images/greens.png" alt="Зелень" class="thumbnail-image">
+            </div>
+            <div class="thumbnail-item">
+                <img src="images/auchan.png" alt="Ашан" class="thumbnail-image">
+            </div>
+            <div class="thumbnail-item">
+                <img src="images/building.png" alt="Здание" class="thumbnail-image">
+            </div>
+            <div class="thumbnail-item">
+                <img src="images/roller.png" alt="Дорожный каток" class="thumbnail-image">
+            </div>
+            <div class="thumbnail-item">
+                <img src="images/ice-rink.png" alt="Ледовый каток" class="thumbnail-image">
+            </div>
+        </header>
+
+        <!-- Контейнер с карточками вопросов -->
+        <main class="questions-container">
+            <!-- Вопрос (динамически заполняется JS) -->
+            <section class="question-card">
+                <div class="question-number">
+                    <span class="number-badge">1</span>
+                    <span class="number-badge">2</span>
+                    <span class="number-badge">3</span>
+                    <span class="number-badge">4</span>
+                    <span class="number-badge">5</span>
+                </div>
+                <div class="question-content">
+                    <img src="" alt="" class="question-image" id="questionImage">
+                    <div class="question-input-group">
+                        <label class="input-label" id="questionHint">Напишите ответ</label>
+                        <div class="input-wrapper">
+                            <input type="text" class="answer-input" id="answerInput" placeholder="Введите ответ" autocomplete="off">
+                            <button class="check-button" id="checkButton" aria-label="Проверить ответ">
+                                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <button class="close-button" id="closeButton" aria-label="Перезапустить">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </section>
+        </main>
+
+        <!-- Навигация -->
+        <footer class="navigation-footer">
+            <a href="answers.html" class="answers-link">Перейти к таблице ответов →</a>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
