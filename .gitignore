@@ -1,0 +1,62 @@
+```
+# Dependencies
+node_modules/
+
+# Archives
+*.tar.gz
+
+# Environment
+.env
+.env.local
+.env.*
+
+# Logs
+*.log
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+dist/
+build/
+target/
+coverage/
+htmlcov/
+.mypy_cache/
+.pytest_cache/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Compiled
+*.class
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.out
+
+# Temp files
+*.tmp
+*.swp
+*.swo
+
+# Testing
+.coverage
+
+# Package manager
+package-lock.json
+yarn.lock
+```

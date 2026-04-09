@@ -1,0 +1,72 @@
+{
+  "id": "mafia-tenebrae",
+  "name": "Мафия: Тени Нью-Валлетто",
+  "description": "Масштабная текстовая RPG в стиле классической Мафии. 1945 год, вы возвращаетесь с войны и должны доказать свою преданность Семье.",
+  "version": "1.0.0",
+  
+  "orientation": "portrait",
+  
+  "screen": {
+    "fullscreen": false
+  },
+  
+  "controls": {
+    "keyboard": true,
+    "mouse": true,
+    "gamepad": false,
+    "touch": true
+  },
+  
+  "age_rating": "18+",
+  
+  "categories": [
+    "adventure",
+    "role-play",
+    "text"
+  ],
+  
+  "tags": [
+    "mafia",
+    "rpg",
+    "story",
+    "choices",
+    "crime",
+    "detective"
+  ],
+  
+  "assets": {
+    "icon_512": "assets/icon-512.png",
+    "icon_16": "assets/favicon-16.png",
+    "icon_32": "assets/favicon-32.png",
+    "icon_64": "assets/favicon-64.png",
+    "screenshots": [
+      "assets/screenshot-1.png",
+      "assets/screenshot-2.png",
+      "assets/screenshot-3.png"
+    ]
+  },
+  
+  "sdk": {
+    "yandex_games": {
+      "enabled": true,
+      "features": [
+        "adv_show_fullscreen",
+        "player_auth",
+        "cloud_saves",
+        "leaderboards",
+        "achievements"
+      ]
+    }
+  },
+  
+  "localization": {
+    "ru": {
+      "title": "Мафия: Тени Нью-Валлетто",
+      "description": "Погрузитесь в криминальный мир 1945 года. Станьте частью Семьи Моретти, принимайте судьбоносные решения и поднимайтесь по иерархии мафии."
+    },
+    "en": {
+      "title": "Mafia: Shadows of New Valletto",
+      "description": "Immerse yourself in the criminal world of 1945. Join the Moretti Family, make fateful decisions and rise through the mafia hierarchy."
+    }
+  }
+}

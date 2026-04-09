@@ -1,0 +1,23 @@
+{
+  "name": "mafia-tenebrae-yandex",
+  "version": "1.0.0",
+  "description": "Масштабная текстовая игра в стиле Мафия для Яндекс Игр",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8080 -c-1",
+    "build": "echo 'No build step required for vanilla JS'",
+    "test": "echo 'No tests yet'"
+  },
+  "keywords": [
+    "mafia",
+    "yandex-games",
+    "visual-novel",
+    "rpg",
+    "text-game"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
