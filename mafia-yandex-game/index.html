@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мафия: Тени Нью-Валлетто</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Подключение SDK Яндекс Игр -->
+    <script src="https://yandex.ru/games/sdk/v2"></script>
+</head>
+<body>
+    <div id="game-container">
+        <!-- Экран загрузки -->
+        <div id="loading-screen" class="screen active">
+            <h1>MAFIA: TENEBRAE</h1>
+            <p>Загрузка мира...</p>
+            <div class="loader"></div>
+        </div>
+
+        <!-- Главное меню -->
+        <div id="menu-screen" class="screen">
+            <h1>МАФИЯ</h1>
+            <h2>ТЕНИ НЬЮ-ВАЛЛЕТТО</h2>
+            <button id="btn-start">Начать игру</button>
+            <button id="btn-continue" disabled>Продолжить</button>
+            <button id="btn-settings">Настройки</button>
+        </div>
+
+        <!-- Экран создания персонажа -->
+        <div id="char-creation-screen" class="screen">
+            <h2>Кто вы в этом мире?</h2>
+            <div class="form-group">
+                <label for="player-name">Имя:</label>
+                <input type="text" id="player-name" placeholder="Введите имя..." value="Тони">
+            </div>
+            <div class="form-group">
+                <label for="player-role">Роль в семье:</label>
+                <select id="player-role">
+                    <option value="soldier">Солдат (Баланс)</option>
+                    <option value="capo">Капо (Влияние)</option>
+                    <option value="consigliere">Консильери (Интеллект)</option>
+                </select>
+            </div>
+            <button id="btn-confirm-char">Войти в город</button>
+        </div>
+
+        <!-- Основной игровой экран -->
+        <div id="gameplay-screen" class="screen">
+            <header>
+                <div id="day-counter">День 1</div>
+                <div id="reputation-bar">Репутация: <span id="rep-value">50</span>/100</div>
+            </header>
+            
+            <div id="scene-area">
+                <div id="scene-image"></div>
+                <div id="dialogue-box">
+                    <div id="speaker-name">Рассказчик</div>
+                    <div id="dialogue-text">Текст диалога...</div>
+                    <div id="choices-container">
+                        <!-- Кнопки выбора генерируются здесь -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/yandex-sdk.js"></script>
+    <script src="src/story-data.js"></script>
+    <script src="src/game-engine.js"></script>
+    <script src="src/main.js"></script>
+</body>
+</html>

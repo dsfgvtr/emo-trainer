@@ -1,0 +1,228 @@
+/* Общие стили */
+:root {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --accent-color: #c0392b; /* Кроваво-красный */
+    --secondary-color: #2c3e50;
+    --gold-color: #f1c40f;
+    --font-main: 'Georgia', serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    overflow: hidden;
+    user-select: none;
+}
+
+#game-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Экраны */
+.screen {
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle, #2c2c2c 0%, #000000 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.screen.active {
+    display: flex;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Типографика */
+h1 {
+    font-size: 3rem;
+    color: var(--accent-color);
+    text-shadow: 2px 2px 4px #000;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: var(--gold-color);
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+/* Кнопки */
+button {
+    background: transparent;
+    border: 2px solid var(--gold-color);
+    color: var(--gold-color);
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 1.2rem;
+    font-family: var(--font-main);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    min-width: 200px;
+}
+
+button:hover:not(:disabled) {
+    background: var(--gold-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px var(--gold-color);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: #555;
+    color: #555;
+}
+
+/* Формы */
+.form-group {
+    margin: 15px 0;
+    text-align: left;
+    width: 300px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--gold-color);
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    border: 1px solid var(--gold-color);
+    color: white;
+    font-family: var(--font-main);
+    font-size: 1rem;
+}
+
+/* Игровой интерфейс */
+#gameplay-screen {
+    justify-content: flex-start;
+    background-image: url('../assets/bg-city.jpg'); /* Заглушка, будет заменена JS */
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+#day-counter {
+    font-size: 1.2rem;
+    color: var(--gold-color);
+}
+
+#reputation-bar {
+    font-size: 1.2rem;
+}
+
+#scene-area {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+
+#dialogue-box {
+    background: rgba(20, 20, 20, 0.95);
+    border: 2px solid var(--secondary-color);
+    border-top: 4px solid var(--accent-color);
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+#speaker-name {
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+#dialogue-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    min-height: 60px;
+}
+
+#choices-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+#choices-container button {
+    min-width: 150px;
+    font-size: 1rem;
+    padding: 10px 15px;
+}
+
+/* Лоадер */
+.loader {
+    border: 5px solid #333;
+    border-top: 5px solid var(--accent-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-top: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 600px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.2rem; }
+    
+    #dialogue-box {
+        width: 90%;
+        padding: 15px;
+    }
+    
+    button {
+        min-width: 150px;
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
